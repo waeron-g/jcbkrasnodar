@@ -1,0 +1,5 @@
+2020-01-31 11:03:36 - PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/c/cp23768/site/public_html/system/library/db/mysqli.php on line 7
+2020-01-31 11:03:38 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in /home/c/cp23768/site/public_html/system/library/db/mysqli.php on line 10
+2020-01-31 11:03:38 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in /home/c/cp23768/site/public_html/system/library/db/mysqli.php on line 10
+2020-01-31 11:03:38 - PHP Notice:  Undefined variable: mysql in /home/c/cp23768/site/public_html/install/controller/install/step_3.php on line 280
+2020-01-31 11:03:38 - PHP Notice:  Trying to get property of non-object in /home/c/cp23768/site/public_html/install/controller/install/step_3.php on line 280
