@@ -354,10 +354,10 @@ header .btn-link:hover,header .btn-link:focus, #top-links a:hover,  #top-links a
     text-align: center;
     position: relative;
     float: right;
-    padding: 0px;
     width: auto;
     z-index: 9;
     padding: 31px 0px;
+    margin-top:0.8em;
 }
 #cart .dropdown-toggle {
     padding: 0;
@@ -425,6 +425,8 @@ header{
     width: auto;
     margin: 31px 0;
     margin-right: 30px;
+    margin-top: 3em;
+    color:black;
 }
 #search .search_toggle{
     display: none;
@@ -689,7 +691,7 @@ header #cart li a, header #cart li {
 	.header-container.fixed .main-menu > ul > li.top_level > a:before {
 		bottom: 10px;
 	}
-	.header-container.fixed #search{     margin-top: 19px;margin-bottom: 20px;}
+	.header-container.fixed #search{     margin-top: 2em;margin-bottom: 20px;}
 	.header-container.fixed  .dropdown.myaccount{}
 	.header-container.fixed .header-cart{
 		padding-top:19px;
@@ -772,6 +774,7 @@ header #cart li a, header #cart li {
     float: none;
     list-style: outside none none;
     margin: 0;
+    padding-top: 0.8em;
     top: auto;
     text-align: center; 
     padding-left: 0px;
@@ -5207,7 +5210,7 @@ background:#f3f3f3 !important;
     float: left;
     padding: 13px 30px 13px;
     position: relative;
-    border-right: 1px solid #2674d5;
+    border-right: 1px solid #fff;
 	color: #ffffff;
 	cursor: pointer;
 }

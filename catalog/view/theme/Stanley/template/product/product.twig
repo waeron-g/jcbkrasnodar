@@ -244,7 +244,6 @@
             	{% endif %}
 				
 			  	<button type="button" id="button-cart" data-loading-text="{{ text_loading }}" class="btn btn-primary btn-lg btn-block">{{ button_cart }}</button>
-            	<button type="button" data-toggle="tooltip" class="btn btn-default wishlist" title="{{ button_wishlist }}" onclick="wishlist.add('{{ product_id }}');"></button>
             	<button type="button" data-toggle="tooltip" class="btn btn-default compare" title="{{ button_compare }}" onclick="compare.add('{{ product_id }}');"></button>
            </div>
             
@@ -393,8 +392,6 @@
 									{% endif %}
 						
 									<div class="button-group">
-										<button class="wishlist" type="button" data-toggle="tooltip" title="{{ button_wishlist }} " onclick="wishlist.add('{{ product.product_id }} ');">
-											<i class="fa fa-heart"></i></button>
 										<div class="quickview-button" data-toggle="tooltip" title="{{ quick_view }}"> <a class="quickbox" href="{{ product.quick }}">
 											<i class="fa fa-eye" aria-hidden="true"></i></a></div>
 										<button class="compare" type="button" data-toggle="tooltip" title="{{ button_compare }} " onclick="compare.add('{{ product.product_id }} ');">

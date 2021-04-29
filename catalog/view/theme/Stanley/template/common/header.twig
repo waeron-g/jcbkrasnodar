@@ -91,30 +91,10 @@
 <nav id="top">
 	<div class="container">
 				{{ headertop }}
-    	<div id="top-links" class="nav pull-left">
-		<div class="dropdown myaccount">
-			<a href="{{ account }}" title="{{ text_account }}" class="dropdown-toggle" data-toggle="dropdown">
-				<span class="hidden-xs hidden-sm hidden-md">{{ text_account }}</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
-			<ul class="dropdown-menu dropdown-menu-right myaccount-menu">
-				{% if logged %}
-				<li><a href="{{ account }}">{{ text_account }}</a></li>
-				<li><a href="{{ order }}">{{ text_order }}</a></li>
-				<li><a href="{{ transaction }}">{{ text_transaction }}</a></li>
-				<li><a href="{{ download }}">{{ text_download }}</a></li>
-				<li><a href="{{ logout }}">{{ text_logout }}</a></li>
-				{% else %}
-				<li><a href="{{ register }}">{{ text_register }}</a></li>
-				<li><a href="{{ login }}">{{ text_login }}</a></li>
-				{% endif %}
-				<li><a href="{{ wishlist }}" id="wishlist-total" title="{{ text_wishlist }}">{{ text_wishlist }}</a></li>
-				<li><a href="{{ shopping_cart }}" title="{{ text_shopping_cart }}">{{ text_shopping_cart }}</a></li>
-				<li><a href="{{ checkout }}" title="{{ text_checkout }}">{{ text_checkout }}</a></li>
-			</ul>
-		</div>
-			<div class="lang-curr">
-				{{ language }}
-				{{ currency }}			
-			</div>
+				<div class="nav pull-right">
+				<i class="fa fa-phone"></i><span> {{telephone}}</span><br>
+				<i class="fa fa-envelope-o"></i><span> {{email}}</span>
+				</div>
   </div>
 </nav>
 
@@ -122,8 +102,8 @@
 <div class="header-container">
 	<div class="container">
     	<div class="row">
-			<div class="header-main">
-				<div class="header-logo">
+			<div class="header-main ">
+				<div class="header-logo col-md-2">
 					<div id="logo">
 						{% if logo %}<a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-responsive" /></a>{% else %}
 					  	<h1><a href="{{ home }}">{{ name }}</a></h1>
@@ -136,7 +116,7 @@
 						 {{ search }}
 				{#</div>#}
 				
-				<div class="headertop-inner">
+				<div class="headertop-inner col-md-8">
 					 {{ menu }}
 				</div>
 				
