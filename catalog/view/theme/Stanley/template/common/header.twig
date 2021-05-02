@@ -91,10 +91,22 @@
 <nav id="top">
 	<div class="container">
 				{{ headertop }}
-				<div class="nav pull-right">
-				<i class="fa fa-phone"></i><span> {{telephone}}</span><br>
-				<i class="fa fa-envelope-o"></i><span> {{email}}</span>
-				</div>
+				<div class="col-md-4 pull-right">
+					<div class="col-md-6">
+						<div class="navcms-content">
+							<div class="navcms-heading">
+								<a href="tel:{{telephone}}"><i class="fa fa-phone"><span> {{telephone}}</span></i></a>
+							</div> 
+						</div>
+					</div>
+					
+					<div class="col-md-6">
+						<div class="navcms-content">
+							<div class="navcms-heading">
+								<a href="mailto:{{email}}"><i class="fa fa-envelope-o"><span> {{email}}</span></i></a>
+							</div> 
+						</div>
+					</div>
   </div>
 </nav>
 

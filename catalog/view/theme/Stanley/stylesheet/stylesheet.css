@@ -95,6 +95,15 @@ div.required .control-label:before {
     text-align: left;
     letter-spacing: 0.7px;
 }
+#top a
+{
+    color:#fff;
+}
+
+#top a:hover
+{
+    color:#fcb026;
+}
 #top .container {
 
 }
@@ -1739,7 +1748,7 @@ footer h5,
     font-size: 13px;
     font-weight: 400;
     letter-spacing: .6px;
-    border-top: 1px solid #4191f5;
+    border-top: 1px solid #f7f7f7;
 }
 .bottomfooter p.powered a{ text-decoration: underline;  color: #ffffff; }
 .bottomfooter p.powered a:hover {
