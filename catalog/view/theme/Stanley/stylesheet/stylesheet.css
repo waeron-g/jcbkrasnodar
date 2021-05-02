@@ -366,7 +366,7 @@ header .btn-link:hover,header .btn-link:focus, #top-links a:hover,  #top-links a
     width: auto;
     z-index: 9;
     padding: 31px 0px;
-    margin-top:0.8em;
+    margin-top:1.28em;
 }
 #cart .dropdown-toggle {
     padding: 0;
@@ -434,7 +434,7 @@ header{
     width: auto;
     margin: 31px 0;
     margin-right: 30px;
-    margin-top: 3em;
+    margin-top: 3.5em;
     color:black;
 }
 #search .search_toggle{
@@ -780,6 +780,7 @@ header #cart li a, header #cart li {
 }
 #menu ul {
     display: table-cell;
+    vertical-align: top;
     float: none;
     list-style: outside none none;
     margin: 0;
@@ -820,9 +821,7 @@ header #cart li a, header #cart li {
     display: block;
     color: #000000;
 }
-.main-menu > ul > li.top_level > a{
-	letter-spacing: .7px;
-}
+
 .main-menu ul > li > a, .hiden_menu li > a {
     padding: 35px 0px;
     font-family: 'Poppins', sans-serif;
@@ -832,14 +831,14 @@ header #cart li a, header #cart li {
     text-transform: capitalize;
     position: relative;
     width: auto;
-    font-size: 13px;
+    font-size: 1.05em;
     font-weight: 500;
-    line-height: 26px;
+    line-height: 3em;
 }
 .main-menu > ul > li.top_level > a{
-    margin: 0 23px;
+    margin: 0 10px;
 }
-.main-menu > ul > li:nth-child(2).top_level > a:after{
+/* .main-menu > ul > li:nth-child(2).top_level > a:after{
 	background: url(../image/codezeel/tag1.png) no-repeat scroll 0px 0px transparent;
     width: 40px;
     height: 30px;
@@ -848,7 +847,7 @@ header #cart li a, header #cart li {
     right: -10px;
     content: "";
     animation: blinker 1s linear infinite;
-}
+} */
 .main-menu > ul > li:nth-child(5).top_level > a:after{
 	background: url(../image/codezeel/tag2.png) no-repeat scroll 0px 0px transparent;
     width: 40px;
@@ -5290,23 +5289,8 @@ background:#f3f3f3 !important;
     color: #ffffff;
     letter-spacing: 0;
     line-height: 22px;
-    -webkit-transform: rotateX(0deg);
-    -moz-transform: rotateX(0deg);
-    -o-transform: rotateX(0deg);
-    transform: rotateX(0deg);
-    transition: all 0.5s ease 0s;
-    -webkit-transition: all 0.5s ease 0s;
-    -moz-transition: all 0.5s ease 0s;
-    -ms-transition: all 0.5s ease 0s;
-    -o-transition: all 0.5s ease 0s;
 }
-#czsubbannercmsblock .subbanners .one-half .subbanner:hover .subbanner-text .main-title {
-	-webkit-transform: rotateX(360deg);
-	-moz-transform: rotateX(360deg);
-	-o-transform: rotateX(360deg);
-	transform: rotateX(360deg);
-	 color: black;
-}
+
 #czsubbannercmsblock .subbanners .one-half .subbanner .subbanner-text .sub-title {
 	 font-size: 14px;
     letter-spacing: 0.5px;
@@ -5969,23 +5953,9 @@ background:#f3f3f3 !important;
     font-weight: 600;
     color: #ffffff;
     text-transform: capitalize;
-	-webkit-transform: rotateX(0deg);
-    -moz-transform: rotateX(0deg);
-    -o-transform: rotateX(0deg);
-    transform: rotateX(0deg);
-    transition: all 0.5s ease 0s;
-    -webkit-transition: all 0.5s ease 0s;
-    -moz-transition: all 0.5s ease 0s;
-    -ms-transition: all 0.5s ease 0s;
-    -o-transition: all 0.5s ease 0s;
+	
 }
-#czbannercmsblock .cmsbanners .one-half .cmsbanner:hover .cmsbanner-text .main-title{
-	-webkit-transform: rotateX(360deg);
-    -moz-transform: rotateX(360deg);
-    -o-transform: rotateX(360deg);
-    transform: rotateX(360deg);
-	color: black;
-}
+
 #czbannercmsblock .cmsbanners .one-half .cmsbanner .cmsbanner-text .cms-desc {
 	display: block;
     font-size: 13px;

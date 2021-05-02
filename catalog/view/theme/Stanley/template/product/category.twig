@@ -46,7 +46,6 @@
 			<button type="button" id="list-view" class="btn btn-default list" data-toggle="tooltip" title="{{ button_list }}"><i class="fa fa-th-list"></i></button>            
           </div>
         </div>
-		<div class="compare-total"><a href="{{ compare }}" id="compare-total"> {{ text_compare }}</a></div>
 		<div class="pagination-right">
 		 <div class="sort-by-wrapper">
 			<div class="col-md-2 text-right sort-by">
@@ -108,21 +107,20 @@
 					{% endif %}
 					
 					{% if product.special %}        
-						<div class="percentsaving">{{ product.percentsaving }}% off</div>
+						<div class="percentsaving"> -{{ product.percentsaving }}%</div>
 					{% endif %}
 						
 					<div class="button-group">
 						<div class="quickview-button" data-toggle="tooltip" title="{{ quick_view }}"> <a class="quickbox" href="{{ product.quick }}">
 							<i class="fa fa-eye" aria-hidden="true"></i></a></div>
-						<button type="button" class="compare" data-toggle="tooltip" title="{{ button_compare }}" onclick="compare.add('{{ product.product_id }}');"><i class="fa fa-exchange"></i></button>
 						<button type="button" class="addtocart" data-toggle="tooltip" title="{{ button_cart }} " onclick="cart.add('{{ product.product_id }} ');"><span>{{ button_cart }}</span> </button>
 				  	</div>
 				</div>
             	
 				<div class="product-details">
               		<div class="caption">
-					  
-					    <div class="rating">
+					  	
+					    {# <div class="rating">
 						  {% for i in 1..5 %}
 							 {% if product.rating < i %}
 							 <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
@@ -130,12 +128,12 @@
 							 <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
 							 {% endif %}
 							 {% endfor %}
-						</div>
+						</div> #}
 											
 						<h4><a href="{{ product.href }}">{{ product.name }}</a></h4>
+						<p>Арт: {{product.sku}}</p>
 						
-						
-						<div class="rating list-rate">
+						{# <div class="rating list-rate">
 						  {% for i in 1..5 %}
 							 {% if product.rating < i %}
 							 <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
@@ -143,7 +141,7 @@
 							 <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
 							 {% endif %}
 							 {% endfor %}
-						</div>
+						</div> #}
 					   
 					   {% if product.price %}
 							<p class="price">

@@ -105,7 +105,8 @@ jQuery(window).load(function(){
 		
 	  	if($('body.common-home').length == 1){ 
 				var deadline = new Date("dec 23, 2021 15:37:25").getTime(); 
-				  
+				if (document.getElementById("day"))
+				{
 				var x = setInterval(function() { 
 				  
 				var now = new Date().getTime(); 
@@ -126,7 +127,7 @@ jQuery(window).load(function(){
 						document.getElementById("minute").innerHTML ='0' ;  
 						document.getElementById("second").innerHTML = '0'; } 
 				}, 1000); 
-		
+			}
 		}
 
 

@@ -205,7 +205,6 @@ class ControllerProductCategory extends Controller {
 				} else {
 					$rating = false;
 				}
-
 				$data['products'][] = array(
 					'product_id'  => $result['product_id'],
 					'thumb'       => $image,
@@ -216,6 +215,7 @@ class ControllerProductCategory extends Controller {
 					'special'     => $special,
 					'percentsaving' 	 => round((($result['price'] - $result['special'])/$result['price'])*100, 0),
 					'tax'         => $tax,
+					'sku'		  => $result['sku'],
 					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
 					'rating'      => $result['rating'],
 					'href'        => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url),

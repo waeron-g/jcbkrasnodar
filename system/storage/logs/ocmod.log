@@ -4603,3 +4603,2338 @@ LINE: 21
 CODE: $image_new = str_replace('
 LINE: 100
 ----------------------------------------------------------------
+2021-05-02 16:33:51 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD: Export/Import Tool (V3.22) for OpenCart 3.x
+
+FILE: admin/controller/common/column_left.php
+CODE: if ($this->user->hasPermission('access', 'tool/upload')) {
+LINE: 601
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_backup']
+LINE: 8
+
+FILE: admin/language/ru-ru/common/column_left.php
+CODE: $_['text_backup']
+LINE: 9
+----------------------------------------------------------------
+MOD: Localcopy OCMOD Install Fix
+
+FILE: admin/controller/marketplace/install.php
+CODE: if ($safe) {
+LINE: 165
+CODE: if (is_dir($file) && !is_dir($path)) {
+LINE: 221
+----------------------------------------------------------------
+MOD: SEO Pro
+
+FILE: system/config/catalog.php
+CODE: $_['action_pre_action']
+LINE: 39
+CODE: 'startup/seo_url'
+LINE: 45
+
+FILE: admin/controller/setting/setting.php
+CODE: if (isset($this->request->post['config_file_max_size'])) {
+LINE: 845
+
+FILE: admin/language/en-gb/setting/setting.php
+CODE: $_['entry_meta_title']
+LINE: 45
+
+FILE: admin/language/ru-ru/setting/setting.php
+CODE: $_['entry_meta_title']
+LINE: 45
+
+FILE: admin/view/template/setting/setting.twig
+CODE: <label class="col-sm-2 control-label" for="input-robots"><span data-toggle="tooltip" title="{{ help_robots }}">{{ entry_robots }}</span></label>
+LINE: 1246
+
+FILE: admin/controller/catalog/product.php
+CODE: $data['product_categories'] = array();
+LINE: 885
+
+FILE: admin/language/en-gb/catalog/product.php
+CODE: $_['entry_name']
+LINE: 30
+
+FILE: admin/language/ru-ru/catalog/product.php
+CODE: $_['entry_name']
+LINE: 28
+
+FILE: admin/model/catalog/product.php
+CODE: if (isset($data['product_related'])) {
+LINE: 102
+LINE: 264
+CODE: public function getProductRelated($product_id) {
+LINE: 634
+CODE: $this->cache->delete('product');
+LINE: 140
+LINE: 310
+LINE: 369
+
+FILE: admin/view/template/catalog/product_form.twig
+CODE: <label class="col-sm-2 control-label" for="input-category"><span data-toggle="tooltip" title="{{ help_category }}">{{ entry_category }}</span></label>
+LINE: 401
+CODE: $('#product-category').append('<div id="product-category' + item['value'] + '"><i class="fa fa-minus-circle"></i> ' + item['label'] + '<input type="hidden" name="product_category[]" value="' + item['value'] + '" /></div>');
+LINE: 1213
+CODE: $('#product-category').delegate('.fa-minus-circle', 'click', function() {
+LINE: 1220
+
+FILE: admin/model/catalog/category.php
+CODE: $this->cache->delete('category');
+LINE: 60
+LINE: 169
+LINE: 193
+
+FILE: admin/model/catalog/manufacturer.php
+CODE: $this->cache->delete('manufacturer');
+LINE: 31
+LINE: 66
+LINE: 77
+
+FILE: admin/model/catalog/information.php
+CODE: $this->cache->delete('information');
+LINE: 37
+LINE: 82
+LINE: 95
+
+FILE: catalog/view/theme/Stanley/template/checkout/cart.twig
+CODE: onclick="cart.remove('{{ product.cart_id }}');"
+LINE: 67
+CODE: onclick="voucher.remove('{{ voucher.key }}');"
+LINE: 81
+
+FILE: catalog/view/theme/default/template/checkout/cart.twig
+CODE: onclick="cart.remove('{{ product.cart_id }}');"
+LINE: 67
+CODE: onclick="voucher.remove('{{ voucher.key }}');"
+LINE: 81
+----------------------------------------------------------------
+MOD: SEOgenerator PRO OC3
+CODE: protected function getForm() {
+LINE: 493
+CODE: if ((utf8_strlen($value['meta_title']) < 1) || (utf8_strlen($value['meta_title']) > 255)) {
+LINE: 1195
+
+FILE: admin/controller/catalog/category.php
+CODE: protected function getForm() {
+LINE: 284
+CODE: if ((utf8_strlen($value['meta_title']) < 1) || (utf8_strlen($value['meta_title']) > 255)) {
+LINE: 523
+CODE: <div class="form-group required">
+LINE: 49
+LINE: 63
+LINE: 93
+
+FILE: admin/view/template/catalog/category_form.twig
+CODE: <div class="form-group required">
+LINE: 43
+LINE: 58
+
+FILE: catalog/controller/product/category.php
+CODE: $data['sorts'] = array();
+LINE: 361
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/product/product.php
+CODE: $data['text_minimum'] = sprintf($this->language->get('text_minimum'), $product_info['minimum']);
+LINE: 371
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/product/manufacturer.php
+CODE: $data['text_compare'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
+LINE: 232
+CODE: public function index() {
+LINE: 17
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 119
+
+FILE: catalog/controller/information/information.php
+CODE: $data['description'] = html_entity_decode($information_info['description'], ENT_QUOTES, 'UTF-8');
+LINE: 129
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/product/special.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 121
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/product/compare.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 113
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/product/search.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 160
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/information/sitemap.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 93
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/information/contact.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 95
+LINE: 347
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/account.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/address.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 101
+LINE: 205
+LINE: 322
+LINE: 455
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/affiliate.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 101
+LINE: 213
+CODE: public function index() {
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/controller/account/download.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/edit.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 101
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/forgotten.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/login.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 137
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/logout.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 112
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/newsletter.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/order.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/password.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 101
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/recurring.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/register.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/reset.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 110
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/return.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 101
+LINE: 404
+LINE: 771
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/reward.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/success.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 93
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/tracking.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 104
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/transaction.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/voucher.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 95
+LINE: 336
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/wishlist.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 114
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/cart.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 93
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/checkout.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 115
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/confirm.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/failure.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 93
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/guest.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/guest_shipping.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/login.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/payment_address.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/payment_method.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/register.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/shipping_address.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/shipping_method.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/success.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 110
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/affiliate/login.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/affiliate/register.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/affiliate/success.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 93
+CODE: public function index() {
+LINE: 17
+----------------------------------------------------------------
+MOD: SVG-support
+
+FILE: admin/controller/common/filemanager.php
+CODE: jpg,jpeg,png,gif,JPG,JPEG,PNG,GIF
+LINE: 47
+CODE: 'jpg',
+LINE: 241
+CODE: 'image/jpeg',
+LINE: 254
+
+FILE: admin/model/tool/image.php
+CODE: $extension = pathinfo($filename, PATHINFO_EXTENSION);
+LINE: 15
+
+FILE: catalog/model/tool/image.php
+CODE: $extension = pathinfo($filename, PATHINFO_EXTENSION);
+LINE: 15
+----------------------------------------------------------------
+MOD: WebP Image Converter
+CODE: ModelToolImage
+LINE: 21
+CODE: $image_new = str_replace('
+LINE: 100
+----------------------------------------------------------------
+2021-05-02 16:58:57 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD: Export/Import Tool (V3.22) for OpenCart 3.x
+
+FILE: admin/controller/common/column_left.php
+CODE: if ($this->user->hasPermission('access', 'tool/upload')) {
+LINE: 601
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_backup']
+LINE: 8
+
+FILE: admin/language/ru-ru/common/column_left.php
+CODE: $_['text_backup']
+LINE: 9
+----------------------------------------------------------------
+MOD: Localcopy OCMOD Install Fix
+
+FILE: admin/controller/marketplace/install.php
+CODE: if ($safe) {
+LINE: 165
+CODE: if (is_dir($file) && !is_dir($path)) {
+LINE: 221
+----------------------------------------------------------------
+MOD: SEO Pro
+
+FILE: system/config/catalog.php
+CODE: $_['action_pre_action']
+LINE: 39
+CODE: 'startup/seo_url'
+LINE: 45
+
+FILE: admin/controller/setting/setting.php
+CODE: if (isset($this->request->post['config_file_max_size'])) {
+LINE: 845
+
+FILE: admin/language/en-gb/setting/setting.php
+CODE: $_['entry_meta_title']
+LINE: 45
+
+FILE: admin/language/ru-ru/setting/setting.php
+CODE: $_['entry_meta_title']
+LINE: 45
+
+FILE: admin/view/template/setting/setting.twig
+CODE: <label class="col-sm-2 control-label" for="input-robots"><span data-toggle="tooltip" title="{{ help_robots }}">{{ entry_robots }}</span></label>
+LINE: 1246
+
+FILE: admin/controller/catalog/product.php
+CODE: $data['product_categories'] = array();
+LINE: 885
+
+FILE: admin/language/en-gb/catalog/product.php
+CODE: $_['entry_name']
+LINE: 30
+
+FILE: admin/language/ru-ru/catalog/product.php
+CODE: $_['entry_name']
+LINE: 28
+
+FILE: admin/model/catalog/product.php
+CODE: if (isset($data['product_related'])) {
+LINE: 102
+LINE: 264
+CODE: public function getProductRelated($product_id) {
+LINE: 634
+CODE: $this->cache->delete('product');
+LINE: 140
+LINE: 310
+LINE: 369
+
+FILE: admin/view/template/catalog/product_form.twig
+CODE: <label class="col-sm-2 control-label" for="input-category"><span data-toggle="tooltip" title="{{ help_category }}">{{ entry_category }}</span></label>
+LINE: 401
+CODE: $('#product-category').append('<div id="product-category' + item['value'] + '"><i class="fa fa-minus-circle"></i> ' + item['label'] + '<input type="hidden" name="product_category[]" value="' + item['value'] + '" /></div>');
+LINE: 1213
+CODE: $('#product-category').delegate('.fa-minus-circle', 'click', function() {
+LINE: 1220
+
+FILE: admin/model/catalog/category.php
+CODE: $this->cache->delete('category');
+LINE: 60
+LINE: 169
+LINE: 193
+
+FILE: admin/model/catalog/manufacturer.php
+CODE: $this->cache->delete('manufacturer');
+LINE: 31
+LINE: 66
+LINE: 77
+
+FILE: admin/model/catalog/information.php
+CODE: $this->cache->delete('information');
+LINE: 37
+LINE: 82
+LINE: 95
+
+FILE: catalog/view/theme/Stanley/template/checkout/cart.twig
+CODE: onclick="cart.remove('{{ product.cart_id }}');"
+LINE: 67
+CODE: onclick="voucher.remove('{{ voucher.key }}');"
+LINE: 81
+
+FILE: catalog/view/theme/default/template/checkout/cart.twig
+CODE: onclick="cart.remove('{{ product.cart_id }}');"
+LINE: 67
+CODE: onclick="voucher.remove('{{ voucher.key }}');"
+LINE: 81
+----------------------------------------------------------------
+MOD: SEOgenerator PRO OC3
+CODE: protected function getForm() {
+LINE: 493
+CODE: if ((utf8_strlen($value['meta_title']) < 1) || (utf8_strlen($value['meta_title']) > 255)) {
+LINE: 1195
+
+FILE: admin/controller/catalog/category.php
+CODE: protected function getForm() {
+LINE: 284
+CODE: if ((utf8_strlen($value['meta_title']) < 1) || (utf8_strlen($value['meta_title']) > 255)) {
+LINE: 523
+CODE: <div class="form-group required">
+LINE: 49
+LINE: 63
+LINE: 93
+
+FILE: admin/view/template/catalog/category_form.twig
+CODE: <div class="form-group required">
+LINE: 43
+LINE: 58
+
+FILE: catalog/controller/product/category.php
+CODE: $data['sorts'] = array();
+LINE: 360
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/product/product.php
+CODE: $data['text_minimum'] = sprintf($this->language->get('text_minimum'), $product_info['minimum']);
+LINE: 371
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/product/manufacturer.php
+CODE: $data['text_compare'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
+LINE: 232
+CODE: public function index() {
+LINE: 17
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 119
+
+FILE: catalog/controller/information/information.php
+CODE: $data['description'] = html_entity_decode($information_info['description'], ENT_QUOTES, 'UTF-8');
+LINE: 129
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/product/special.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 121
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/product/compare.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 113
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/product/search.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 160
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/information/sitemap.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 93
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/information/contact.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 95
+LINE: 347
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/account.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/address.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 101
+LINE: 205
+LINE: 322
+LINE: 455
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/affiliate.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 101
+LINE: 213
+CODE: public function index() {
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/controller/account/download.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/edit.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 101
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/forgotten.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/login.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 137
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/logout.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 112
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/newsletter.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/order.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/password.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 101
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/recurring.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/register.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/reset.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 110
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/return.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 101
+LINE: 404
+LINE: 771
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/reward.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/success.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 93
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/tracking.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 104
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/transaction.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/voucher.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 95
+LINE: 336
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/wishlist.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 114
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/cart.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 93
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/checkout.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 115
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/confirm.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/failure.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 93
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/guest.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/guest_shipping.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/login.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/payment_address.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/payment_method.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/register.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/shipping_address.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/shipping_method.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/success.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 110
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/affiliate/login.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/affiliate/register.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/affiliate/success.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 93
+CODE: public function index() {
+LINE: 17
+----------------------------------------------------------------
+MOD: SVG-support
+
+FILE: admin/controller/common/filemanager.php
+CODE: jpg,jpeg,png,gif,JPG,JPEG,PNG,GIF
+LINE: 47
+CODE: 'jpg',
+LINE: 241
+CODE: 'image/jpeg',
+LINE: 254
+
+FILE: admin/model/tool/image.php
+CODE: $extension = pathinfo($filename, PATHINFO_EXTENSION);
+LINE: 15
+
+FILE: catalog/model/tool/image.php
+CODE: $extension = pathinfo($filename, PATHINFO_EXTENSION);
+LINE: 15
+----------------------------------------------------------------
+MOD: WebP Image Converter
+CODE: ModelToolImage
+LINE: 21
+CODE: $image_new = str_replace('
+LINE: 100
+----------------------------------------------------------------
+2021-05-02 16:59:42 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD: Export/Import Tool (V3.22) for OpenCart 3.x
+
+FILE: admin/controller/common/column_left.php
+CODE: if ($this->user->hasPermission('access', 'tool/upload')) {
+LINE: 601
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_backup']
+LINE: 8
+
+FILE: admin/language/ru-ru/common/column_left.php
+CODE: $_['text_backup']
+LINE: 9
+----------------------------------------------------------------
+MOD: Localcopy OCMOD Install Fix
+
+FILE: admin/controller/marketplace/install.php
+CODE: if ($safe) {
+LINE: 165
+CODE: if (is_dir($file) && !is_dir($path)) {
+LINE: 221
+----------------------------------------------------------------
+MOD: SEO Pro
+
+FILE: system/config/catalog.php
+CODE: $_['action_pre_action']
+LINE: 39
+CODE: 'startup/seo_url'
+LINE: 45
+
+FILE: admin/controller/setting/setting.php
+CODE: if (isset($this->request->post['config_file_max_size'])) {
+LINE: 845
+
+FILE: admin/language/en-gb/setting/setting.php
+CODE: $_['entry_meta_title']
+LINE: 45
+
+FILE: admin/language/ru-ru/setting/setting.php
+CODE: $_['entry_meta_title']
+LINE: 45
+
+FILE: admin/view/template/setting/setting.twig
+CODE: <label class="col-sm-2 control-label" for="input-robots"><span data-toggle="tooltip" title="{{ help_robots }}">{{ entry_robots }}</span></label>
+LINE: 1246
+
+FILE: admin/controller/catalog/product.php
+CODE: $data['product_categories'] = array();
+LINE: 885
+
+FILE: admin/language/en-gb/catalog/product.php
+CODE: $_['entry_name']
+LINE: 30
+
+FILE: admin/language/ru-ru/catalog/product.php
+CODE: $_['entry_name']
+LINE: 28
+
+FILE: admin/model/catalog/product.php
+CODE: if (isset($data['product_related'])) {
+LINE: 102
+LINE: 264
+CODE: public function getProductRelated($product_id) {
+LINE: 634
+CODE: $this->cache->delete('product');
+LINE: 140
+LINE: 310
+LINE: 369
+
+FILE: admin/view/template/catalog/product_form.twig
+CODE: <label class="col-sm-2 control-label" for="input-category"><span data-toggle="tooltip" title="{{ help_category }}">{{ entry_category }}</span></label>
+LINE: 401
+CODE: $('#product-category').append('<div id="product-category' + item['value'] + '"><i class="fa fa-minus-circle"></i> ' + item['label'] + '<input type="hidden" name="product_category[]" value="' + item['value'] + '" /></div>');
+LINE: 1213
+CODE: $('#product-category').delegate('.fa-minus-circle', 'click', function() {
+LINE: 1220
+
+FILE: admin/model/catalog/category.php
+CODE: $this->cache->delete('category');
+LINE: 60
+LINE: 169
+LINE: 193
+
+FILE: admin/model/catalog/manufacturer.php
+CODE: $this->cache->delete('manufacturer');
+LINE: 31
+LINE: 66
+LINE: 77
+
+FILE: admin/model/catalog/information.php
+CODE: $this->cache->delete('information');
+LINE: 37
+LINE: 82
+LINE: 95
+
+FILE: catalog/view/theme/Stanley/template/checkout/cart.twig
+CODE: onclick="cart.remove('{{ product.cart_id }}');"
+LINE: 67
+CODE: onclick="voucher.remove('{{ voucher.key }}');"
+LINE: 81
+
+FILE: catalog/view/theme/default/template/checkout/cart.twig
+CODE: onclick="cart.remove('{{ product.cart_id }}');"
+LINE: 67
+CODE: onclick="voucher.remove('{{ voucher.key }}');"
+LINE: 81
+----------------------------------------------------------------
+MOD: SEOgenerator PRO OC3
+CODE: protected function getForm() {
+LINE: 493
+CODE: if ((utf8_strlen($value['meta_title']) < 1) || (utf8_strlen($value['meta_title']) > 255)) {
+LINE: 1195
+
+FILE: admin/controller/catalog/category.php
+CODE: protected function getForm() {
+LINE: 284
+CODE: if ((utf8_strlen($value['meta_title']) < 1) || (utf8_strlen($value['meta_title']) > 255)) {
+LINE: 523
+CODE: <div class="form-group required">
+LINE: 49
+LINE: 63
+LINE: 93
+
+FILE: admin/view/template/catalog/category_form.twig
+CODE: <div class="form-group required">
+LINE: 43
+LINE: 58
+
+FILE: catalog/controller/product/category.php
+CODE: $data['sorts'] = array();
+LINE: 360
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/product/product.php
+CODE: $data['text_minimum'] = sprintf($this->language->get('text_minimum'), $product_info['minimum']);
+LINE: 371
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/product/manufacturer.php
+CODE: $data['text_compare'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
+LINE: 232
+CODE: public function index() {
+LINE: 17
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 119
+
+FILE: catalog/controller/information/information.php
+CODE: $data['description'] = html_entity_decode($information_info['description'], ENT_QUOTES, 'UTF-8');
+LINE: 129
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/product/special.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 121
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/product/compare.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 113
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/product/search.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 160
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/information/sitemap.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 93
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/information/contact.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 95
+LINE: 347
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/account.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/address.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 101
+LINE: 205
+LINE: 322
+LINE: 455
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/affiliate.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 101
+LINE: 213
+CODE: public function index() {
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/controller/account/download.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/edit.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 101
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/forgotten.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/login.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 137
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/logout.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 112
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/newsletter.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/order.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/password.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 101
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/recurring.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/register.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/reset.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 110
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/return.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 101
+LINE: 404
+LINE: 771
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/reward.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/success.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 93
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/tracking.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 104
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/transaction.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/voucher.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 95
+LINE: 336
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/wishlist.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 114
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/cart.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 93
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/checkout.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 115
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/confirm.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/failure.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 93
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/guest.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/guest_shipping.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/login.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/payment_address.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/payment_method.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/register.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/shipping_address.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/shipping_method.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/success.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 110
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/affiliate/login.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/affiliate/register.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/affiliate/success.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 93
+CODE: public function index() {
+LINE: 17
+----------------------------------------------------------------
+MOD: SVG-support
+
+FILE: admin/controller/common/filemanager.php
+CODE: jpg,jpeg,png,gif,JPG,JPEG,PNG,GIF
+LINE: 47
+CODE: 'jpg',
+LINE: 241
+CODE: 'image/jpeg',
+LINE: 254
+
+FILE: admin/model/tool/image.php
+CODE: $extension = pathinfo($filename, PATHINFO_EXTENSION);
+LINE: 15
+
+FILE: catalog/model/tool/image.php
+CODE: $extension = pathinfo($filename, PATHINFO_EXTENSION);
+LINE: 15
+----------------------------------------------------------------
+MOD: WebP Image Converter
+CODE: ModelToolImage
+LINE: 21
+CODE: $image_new = str_replace('
+LINE: 100
+----------------------------------------------------------------
+2021-05-02 17:02:57 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD: Export/Import Tool (V3.22) for OpenCart 3.x
+
+FILE: admin/controller/common/column_left.php
+CODE: if ($this->user->hasPermission('access', 'tool/upload')) {
+LINE: 601
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_backup']
+LINE: 8
+
+FILE: admin/language/ru-ru/common/column_left.php
+CODE: $_['text_backup']
+LINE: 9
+----------------------------------------------------------------
+MOD: Localcopy OCMOD Install Fix
+
+FILE: admin/controller/marketplace/install.php
+CODE: if ($safe) {
+LINE: 165
+CODE: if (is_dir($file) && !is_dir($path)) {
+LINE: 221
+----------------------------------------------------------------
+MOD: SEO Pro
+
+FILE: system/config/catalog.php
+CODE: $_['action_pre_action']
+LINE: 39
+CODE: 'startup/seo_url'
+LINE: 45
+
+FILE: admin/controller/setting/setting.php
+CODE: if (isset($this->request->post['config_file_max_size'])) {
+LINE: 845
+
+FILE: admin/language/en-gb/setting/setting.php
+CODE: $_['entry_meta_title']
+LINE: 45
+
+FILE: admin/language/ru-ru/setting/setting.php
+CODE: $_['entry_meta_title']
+LINE: 45
+
+FILE: admin/view/template/setting/setting.twig
+CODE: <label class="col-sm-2 control-label" for="input-robots"><span data-toggle="tooltip" title="{{ help_robots }}">{{ entry_robots }}</span></label>
+LINE: 1246
+
+FILE: admin/controller/catalog/product.php
+CODE: $data['product_categories'] = array();
+LINE: 885
+
+FILE: admin/language/en-gb/catalog/product.php
+CODE: $_['entry_name']
+LINE: 30
+
+FILE: admin/language/ru-ru/catalog/product.php
+CODE: $_['entry_name']
+LINE: 28
+
+FILE: admin/model/catalog/product.php
+CODE: if (isset($data['product_related'])) {
+LINE: 102
+LINE: 264
+CODE: public function getProductRelated($product_id) {
+LINE: 634
+CODE: $this->cache->delete('product');
+LINE: 140
+LINE: 310
+LINE: 369
+
+FILE: admin/view/template/catalog/product_form.twig
+CODE: <label class="col-sm-2 control-label" for="input-category"><span data-toggle="tooltip" title="{{ help_category }}">{{ entry_category }}</span></label>
+LINE: 401
+CODE: $('#product-category').append('<div id="product-category' + item['value'] + '"><i class="fa fa-minus-circle"></i> ' + item['label'] + '<input type="hidden" name="product_category[]" value="' + item['value'] + '" /></div>');
+LINE: 1213
+CODE: $('#product-category').delegate('.fa-minus-circle', 'click', function() {
+LINE: 1220
+
+FILE: admin/model/catalog/category.php
+CODE: $this->cache->delete('category');
+LINE: 60
+LINE: 169
+LINE: 193
+
+FILE: admin/model/catalog/manufacturer.php
+CODE: $this->cache->delete('manufacturer');
+LINE: 31
+LINE: 66
+LINE: 77
+
+FILE: admin/model/catalog/information.php
+CODE: $this->cache->delete('information');
+LINE: 37
+LINE: 82
+LINE: 95
+
+FILE: catalog/view/theme/Stanley/template/checkout/cart.twig
+CODE: onclick="cart.remove('{{ product.cart_id }}');"
+LINE: 67
+CODE: onclick="voucher.remove('{{ voucher.key }}');"
+LINE: 81
+
+FILE: catalog/view/theme/default/template/checkout/cart.twig
+CODE: onclick="cart.remove('{{ product.cart_id }}');"
+LINE: 67
+CODE: onclick="voucher.remove('{{ voucher.key }}');"
+LINE: 81
+----------------------------------------------------------------
+MOD: SEOgenerator PRO OC3
+CODE: protected function getForm() {
+LINE: 493
+CODE: if ((utf8_strlen($value['meta_title']) < 1) || (utf8_strlen($value['meta_title']) > 255)) {
+LINE: 1195
+
+FILE: admin/controller/catalog/category.php
+CODE: protected function getForm() {
+LINE: 284
+CODE: if ((utf8_strlen($value['meta_title']) < 1) || (utf8_strlen($value['meta_title']) > 255)) {
+LINE: 523
+CODE: <div class="form-group required">
+LINE: 49
+LINE: 63
+LINE: 93
+
+FILE: admin/view/template/catalog/category_form.twig
+CODE: <div class="form-group required">
+LINE: 43
+LINE: 58
+
+FILE: catalog/controller/product/category.php
+CODE: $data['sorts'] = array();
+LINE: 360
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/product/product.php
+CODE: $data['text_minimum'] = sprintf($this->language->get('text_minimum'), $product_info['minimum']);
+LINE: 371
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/product/manufacturer.php
+CODE: $data['text_compare'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
+LINE: 232
+CODE: public function index() {
+LINE: 17
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 119
+
+FILE: catalog/controller/information/information.php
+CODE: $data['description'] = html_entity_decode($information_info['description'], ENT_QUOTES, 'UTF-8');
+LINE: 129
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/product/special.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 121
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/product/compare.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 113
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/product/search.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 160
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/information/sitemap.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 93
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/information/contact.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 95
+LINE: 347
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/account.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/address.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 101
+LINE: 205
+LINE: 322
+LINE: 455
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/affiliate.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 101
+LINE: 213
+CODE: public function index() {
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/controller/account/download.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/edit.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 101
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/forgotten.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/login.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 137
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/logout.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 112
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/newsletter.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/order.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/password.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 101
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/recurring.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/register.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/reset.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 110
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/return.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 101
+LINE: 404
+LINE: 771
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/reward.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/success.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 93
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/tracking.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 104
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/transaction.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/voucher.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 95
+LINE: 336
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/wishlist.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 114
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/cart.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 93
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/checkout.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 115
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/confirm.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/failure.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 93
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/guest.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/guest_shipping.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/login.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/payment_address.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/payment_method.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/register.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/shipping_address.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/shipping_method.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/success.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 110
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/affiliate/login.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/affiliate/register.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/affiliate/success.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 93
+CODE: public function index() {
+LINE: 17
+----------------------------------------------------------------
+MOD: SVG-support
+
+FILE: admin/controller/common/filemanager.php
+CODE: jpg,jpeg,png,gif,JPG,JPEG,PNG,GIF
+LINE: 47
+CODE: 'jpg',
+LINE: 241
+CODE: 'image/jpeg',
+LINE: 254
+
+FILE: admin/model/tool/image.php
+CODE: $extension = pathinfo($filename, PATHINFO_EXTENSION);
+LINE: 15
+
+FILE: catalog/model/tool/image.php
+CODE: $extension = pathinfo($filename, PATHINFO_EXTENSION);
+LINE: 15
+----------------------------------------------------------------
+MOD: WebP Image Converter
+CODE: ModelToolImage
+LINE: 21
+CODE: $image_new = str_replace('
+LINE: 100
+----------------------------------------------------------------
+2021-05-02 17:04:40 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD: Export/Import Tool (V3.22) for OpenCart 3.x
+
+FILE: admin/controller/common/column_left.php
+CODE: if ($this->user->hasPermission('access', 'tool/upload')) {
+LINE: 601
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_backup']
+LINE: 8
+
+FILE: admin/language/ru-ru/common/column_left.php
+CODE: $_['text_backup']
+LINE: 9
+----------------------------------------------------------------
+MOD: Localcopy OCMOD Install Fix
+
+FILE: admin/controller/marketplace/install.php
+CODE: if ($safe) {
+LINE: 165
+CODE: if (is_dir($file) && !is_dir($path)) {
+LINE: 221
+----------------------------------------------------------------
+MOD: SEO Pro
+
+FILE: system/config/catalog.php
+CODE: $_['action_pre_action']
+LINE: 39
+CODE: 'startup/seo_url'
+LINE: 45
+
+FILE: admin/controller/setting/setting.php
+CODE: if (isset($this->request->post['config_file_max_size'])) {
+LINE: 845
+
+FILE: admin/language/en-gb/setting/setting.php
+CODE: $_['entry_meta_title']
+LINE: 45
+
+FILE: admin/language/ru-ru/setting/setting.php
+CODE: $_['entry_meta_title']
+LINE: 45
+
+FILE: admin/view/template/setting/setting.twig
+CODE: <label class="col-sm-2 control-label" for="input-robots"><span data-toggle="tooltip" title="{{ help_robots }}">{{ entry_robots }}</span></label>
+LINE: 1246
+
+FILE: admin/controller/catalog/product.php
+CODE: $data['product_categories'] = array();
+LINE: 885
+
+FILE: admin/language/en-gb/catalog/product.php
+CODE: $_['entry_name']
+LINE: 30
+
+FILE: admin/language/ru-ru/catalog/product.php
+CODE: $_['entry_name']
+LINE: 28
+
+FILE: admin/model/catalog/product.php
+CODE: if (isset($data['product_related'])) {
+LINE: 102
+LINE: 264
+CODE: public function getProductRelated($product_id) {
+LINE: 634
+CODE: $this->cache->delete('product');
+LINE: 140
+LINE: 310
+LINE: 369
+
+FILE: admin/view/template/catalog/product_form.twig
+CODE: <label class="col-sm-2 control-label" for="input-category"><span data-toggle="tooltip" title="{{ help_category }}">{{ entry_category }}</span></label>
+LINE: 401
+CODE: $('#product-category').append('<div id="product-category' + item['value'] + '"><i class="fa fa-minus-circle"></i> ' + item['label'] + '<input type="hidden" name="product_category[]" value="' + item['value'] + '" /></div>');
+LINE: 1213
+CODE: $('#product-category').delegate('.fa-minus-circle', 'click', function() {
+LINE: 1220
+
+FILE: admin/model/catalog/category.php
+CODE: $this->cache->delete('category');
+LINE: 60
+LINE: 169
+LINE: 193
+
+FILE: admin/model/catalog/manufacturer.php
+CODE: $this->cache->delete('manufacturer');
+LINE: 31
+LINE: 66
+LINE: 77
+
+FILE: admin/model/catalog/information.php
+CODE: $this->cache->delete('information');
+LINE: 37
+LINE: 82
+LINE: 95
+
+FILE: catalog/view/theme/Stanley/template/checkout/cart.twig
+CODE: onclick="cart.remove('{{ product.cart_id }}');"
+LINE: 67
+CODE: onclick="voucher.remove('{{ voucher.key }}');"
+LINE: 81
+
+FILE: catalog/view/theme/default/template/checkout/cart.twig
+CODE: onclick="cart.remove('{{ product.cart_id }}');"
+LINE: 67
+CODE: onclick="voucher.remove('{{ voucher.key }}');"
+LINE: 81
+----------------------------------------------------------------
+MOD: SEOgenerator PRO OC3
+CODE: protected function getForm() {
+LINE: 493
+CODE: if ((utf8_strlen($value['meta_title']) < 1) || (utf8_strlen($value['meta_title']) > 255)) {
+LINE: 1195
+
+FILE: admin/controller/catalog/category.php
+CODE: protected function getForm() {
+LINE: 284
+CODE: if ((utf8_strlen($value['meta_title']) < 1) || (utf8_strlen($value['meta_title']) > 255)) {
+LINE: 523
+CODE: <div class="form-group required">
+LINE: 49
+LINE: 63
+LINE: 93
+
+FILE: admin/view/template/catalog/category_form.twig
+CODE: <div class="form-group required">
+LINE: 43
+LINE: 58
+
+FILE: catalog/controller/product/category.php
+CODE: $data['sorts'] = array();
+LINE: 360
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/product/product.php
+CODE: $data['text_minimum'] = sprintf($this->language->get('text_minimum'), $product_info['minimum']);
+LINE: 371
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/product/manufacturer.php
+CODE: $data['text_compare'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
+LINE: 232
+CODE: public function index() {
+LINE: 17
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 119
+
+FILE: catalog/controller/information/information.php
+CODE: $data['description'] = html_entity_decode($information_info['description'], ENT_QUOTES, 'UTF-8');
+LINE: 129
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/product/special.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 121
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/product/compare.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 113
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/product/search.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 160
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/information/sitemap.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 93
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/information/contact.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 95
+LINE: 347
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/account.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/address.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 101
+LINE: 205
+LINE: 322
+LINE: 455
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/affiliate.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 101
+LINE: 213
+CODE: public function index() {
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/controller/account/download.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/edit.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 101
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/forgotten.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/login.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 137
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/logout.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 112
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/newsletter.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/order.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/password.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 101
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/recurring.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/register.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/reset.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 110
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/return.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 101
+LINE: 404
+LINE: 771
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/reward.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/success.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 93
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/tracking.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 104
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/transaction.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/account/voucher.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 95
+LINE: 336
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/account/wishlist.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 114
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/cart.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 93
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/checkout.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 115
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/confirm.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/failure.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 93
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/guest.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/guest_shipping.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/login.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/payment_address.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/payment_method.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/register.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/shipping_address.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/shipping_method.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/checkout/success.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 110
+CODE: public function index() {
+LINE: 17
+
+FILE: catalog/controller/affiliate/login.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/affiliate/register.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 99
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/affiliate/success.php
+CODE: $this->document->setTitle($this->language->get('heading_title'));
+LINE: 93
+CODE: public function index() {
+LINE: 17
+----------------------------------------------------------------
+MOD: SVG-support
+
+FILE: admin/controller/common/filemanager.php
+CODE: jpg,jpeg,png,gif,JPG,JPEG,PNG,GIF
+LINE: 47
+CODE: 'jpg',
+LINE: 241
+CODE: 'image/jpeg',
+LINE: 254
+
+FILE: admin/model/tool/image.php
+CODE: $extension = pathinfo($filename, PATHINFO_EXTENSION);
+LINE: 15
+
+FILE: catalog/model/tool/image.php
+CODE: $extension = pathinfo($filename, PATHINFO_EXTENSION);
+LINE: 15
+----------------------------------------------------------------
+MOD: WebP Image Converter
+CODE: ModelToolImage
+LINE: 21
+CODE: $image_new = str_replace('
+LINE: 100
+----------------------------------------------------------------

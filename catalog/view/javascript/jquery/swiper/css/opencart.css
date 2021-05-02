@@ -40,7 +40,7 @@
 }
 .swiper-pagination-bullet:hover,
 .swiper-pagination-bullet-active {
-	background: #2b85f4;
+	background: #000;
 	-webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2);

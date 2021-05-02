@@ -90,8 +90,26 @@
 <body class="{{ class }} {{ layoutclass }}">
 <nav id="top">
 	<div class="container">
-				{{ headertop }}
-				<div class="col-md-4 pull-right">
+				<div id="cznavcmsblock" class="nav-cms-block">  
+	<div class="navcms-area">
+<div class="navcms-half">
+<div class="navcms-content">
+<a href="tel:{{telephone}}"><i class="fa fa-phone"><span> {{telephone}}</span></i></a>
+</div>
+</div>
+	<div class="navcms-half">
+		<div class="navcms-content">
+			<a href="mailto:{{email}}"><i class="fa fa-envelope-o"><span> {{email}}</span></i></a>
+		</div>
+	</div>
+	<div class="navcms-half">
+		<div class="navcms-content">
+			<div class="navcms-heading">г. Краснодар ул. Бородинская 154/12</div>
+		</div>
+	</div>
+</div>
+</div>
+				{# <div class="col-md-4 pull-right">
 					<div class="col-md-6">
 						<div class="navcms-content">
 							<div class="navcms-heading">
@@ -106,7 +124,7 @@
 								<a href="mailto:{{email}}"><i class="fa fa-envelope-o"><span> {{email}}</span></i></a>
 							</div> 
 						</div>
-					</div>
+					</div> #}
   </div>
 </nav>
 
@@ -115,7 +133,7 @@
 	<div class="container">
     	<div class="row">
 			<div class="header-main ">
-				<div class="header-logo col-md-2">
+				<div class="header-logo col-md-4">
 					<div id="logo">
 						{% if logo %}<a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-responsive" /></a>{% else %}
 					  	<h1><a href="{{ home }}">{{ name }}</a></h1>
@@ -128,7 +146,7 @@
 						 {{ search }}
 				{#</div>#}
 				
-				<div class="headertop-inner col-md-8">
+				<div class="headertop-inner col-md-6">
 					 {{ menu }}
 				</div>
 				
