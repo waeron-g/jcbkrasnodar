@@ -69,17 +69,17 @@ $(document).ready(function() {
 		}
 	});
 
-	// Menu
-	$('#menu .dropdown-menu').each(function() {
-		var menu = $('#menu').offset();
-		var dropdown = $(this).parent().offset();
+	// // Menu
+	// $('#menu .dropdown-menu').each(function() {
+	// 	var menu = $('#menu').offset();
+	// 	var dropdown = $(this).parent().offset();
 
-		var i = (dropdown.left + $(this).outerWidth()) - (menu.left + $('#menu').outerWidth());
+	// 	var i = (dropdown.left + $(this).outerWidth()) - (menu.left + $('#menu').outerWidth());
 
-		if (i > 0) {
-			$(this).css('margin-left', '-' + (i + 10) + 'px');
-		}
-	});
+	// 	if (i > 0) {
+	// 		$(this).css('margin-left', '-' + (i + 10) + 'px');
+	// 	}
+	// });
 
 	// Product List
 	localStorage.setItem('display', 'list');
