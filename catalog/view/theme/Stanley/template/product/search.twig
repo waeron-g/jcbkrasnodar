@@ -137,7 +137,7 @@
 						{% endif %}
 						
 						{% if product.special %}        
-							<div class="percentsaving">{{ product.percentsaving }}% off</div>
+							<div class="percentsaving"> -{{ product.percentsaving }}%</div>
 						{% endif %}
 							
 						<div class="button-group">
@@ -161,8 +161,8 @@
 								 {% endfor %}
 						    </div>
 						 
-							<h4><a href="{{ product.href }}">{{ product.name }}</a></h4>
-							
+							<p class="bold-title"><a href="{{ product.href }}">{{ product.name }}</a></p>
+							<p>Артикул: {{product.sku}}</p>
 							<div class="rating list-rate">
 								{% for i in 1..5 %}
 								{% if product.rating < i %}

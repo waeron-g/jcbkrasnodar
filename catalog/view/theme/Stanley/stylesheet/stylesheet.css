@@ -1454,6 +1454,16 @@ footer a:hover,footer a:focus {
     list-style: none;
 }
 
+.footer-title
+{
+    color: #fff;
+    font: 600 15px/26px 'Poppins', sans-serif;
+    text-transform: capitalize;
+    margin: 0 0 20px 0;
+    cursor: pointer;
+    letter-spacing: 0.3px;
+    position: relative;
+}
 .newsletter {
     float: left;
     width: 76%;
@@ -1743,7 +1753,10 @@ footer h5,
 #payement_logo_block_left {
     float: right;
 }
-
+#powered{
+    font-size:0.8em;
+    text-align: center;
+}
 .bottomfooter {
     color: #ffffff;
     font-size: 13px;
@@ -2112,6 +2125,16 @@ p.powered {
 .product-block:hover h4 a {
     color: black;
 }
+
+.bold-title{
+    color: #000;
+    font-weight: bold;
+}
+
+.bold-title>a:hover{
+    color: #fcb027;
+}
+
 .product-thumb h4 a:hover, header #cart li a:hover {
     color: black;
 	}
@@ -7200,4 +7223,33 @@ background:#f3f3f3 !important;
     background: black;
 }
 
+.post-item{
+    border:1px solid #e2d5d5;
+    height: 270px;
+    box-sizing:border-box;
+    text-align:center;
+    padding: 10px;
+    margin-bottom: 5px;
+    background: #fff;
+    color:#000;
+}
 
+.post-item>.item-content>.item-body>.fa
+{
+    font-size:4em;
+    color:#FCB026;
+}
+
+
+.post-item>.item-content>.item-body
+{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: column;
+}
+
+.post-item>.item-content>.item-body>p
+{
+    align-items: center;
+}

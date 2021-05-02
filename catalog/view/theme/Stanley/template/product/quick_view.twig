@@ -27,7 +27,7 @@
         </div>
 
         <div class="col-sm-6 product-right">
-          <h3 class="product-title">{{ heading_title }}</h3>
+          <h1 class="product-title">{{ heading_title }}</h1>
 
 		  {% if review_status %}
           <div class="rating-wrapper">            
@@ -57,11 +57,11 @@
           <ul class="list-unstyled price">
             {% if not special %}
             <li>
-              <h3 class="product-price">{{ price }}</h3>
+              <p class="product-price">{{ price }}</p>
             </li>
             {% else %}
             <li><span class="old-price" style="text-decoration: line-through;">{{ price }}</span> </li>
-            <li><h3 class="special-price">{{ special }}</h3></li>
+            <li><p class="special-price">{{ special }}</p></li>
             {% endif %}
             {% if tax %}
             <li class="price-tax">{{ text_tax }}<span>{{ tax }}</span></li>
@@ -82,7 +82,7 @@
           <div id="product2">
            {% if options %}
             <hr>
-            <h3>{{ text_option }}</h3>
+            <p>{{ text_option }}</p>
             {% for option in options %}
             {% if option.type == 'select' %}
             <div class="form-group{% if option.required %} required {% endif %}">
@@ -183,7 +183,7 @@
             {% endif %}
             {% if recurrings %}
             <hr>
-            <h3>{{ text_payment_recurring }}</h3>
+            <p>{{ text_payment_recurring }}</p>
             <div class="form-group required">
               <select name="recurring_id" class="form-control">
                 <option value="">{{ text_select }}</option>

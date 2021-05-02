@@ -70,7 +70,7 @@
         {% endif %}
         <div class="{{ class }}">
           
-		  <h3 class="product-title">{{ heading_title }}</h3>
+		  <h1 class="product-title">{{ heading_title }}</h1>
 		  
 		  {% if review_status %}
           <div class="rating-wrapper">
@@ -97,14 +97,14 @@
           <ul class="list-unstyled price">
             {% if not special %}
             <li>
-              <h3 class="product-price">{{ price }}</h3>
+              <p class="product-price">{{ price }}</p>
             </li>
             {% else %}
             <li>
 				<span class="old-price" style="text-decoration: line-through;">{{ price }}</span>
 			</li>
             <li>
-				<h3 class="special-price">{{ special }}</h3>
+				<p class="special-price">{{ special }}</p>
 			</li>
 			{% endif %}
             {% if tax %}
@@ -124,7 +124,7 @@
 		  
           <div id="product">
 		   {% if options %}
-            <h3 class="product-option">{{ text_option }}</h3>
+            <p class="product-option">{{ text_option }}</p>
             {% for option in options %}
             {% if option.type == 'select' %}
             <div class="form-group{% if option.required %} required{% endif %}">
@@ -225,7 +225,7 @@
             {% endif %}
             {% if recurrings %}
             <hr>
-            <h3>{{ text_payment_recurring }}</h3>
+            <p>{{ text_payment_recurring }}</p>
             <div class="form-group required">
               <select name="recurring_id" class="form-control">
                 <option value="">{{ text_select }}</option>
@@ -298,7 +298,7 @@
             <div class="tab-pane" id="tab-review">
               <form class="form-horizontal" id="form-review">
                 <div id="review"></div>
-                <h3>{{ text_write }}</h3>
+                <p>{{ text_write }}</p>
                 {% if review_guest %}
                 <div class="form-group required">
                   <div class="col-sm-12">
@@ -385,7 +385,7 @@
 									{% endif %}
 									
 									{% if product.special %}        
-										<div class="percentsaving">{{ product.percentsaving }}% off</div>
+										<div class="percentsaving"> -{{ product.percentsaving }}%</div>
 									{% endif %}
 						
 									<div class="button-group">
@@ -409,7 +409,7 @@
 											{% endfor %}
 										</div>
 									
-										<h4><a href="{{ product.href }} ">{{ product.name }} </a></h4>
+										<p class="bold-title"><a href="{{ product.href }} ">{{ product.name }} </a></p>
 										
 										{# <p class="desc"><?php echo $product['description']; ?></p> #}
 										

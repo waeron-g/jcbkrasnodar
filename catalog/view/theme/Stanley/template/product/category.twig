@@ -15,6 +15,52 @@
     {% endif %}
     <div id="content" class="{{ class }}">{{ content_top }}
       <h1 class="page-title">{{ heading_title }}</h1>
+
+
+	  <div class="col-md-3">
+				<div class="post-item">
+			<div class="item-content">
+			<div class="item-body">
+			<i class="fa fa-check-square-o fa-4x" aria-hidden="true"></i>
+			<p>Оригинальные и качественные {{keys[0]}} импортного производства </p>
+			</div>
+			</div>
+			</div>
+	  </div>
+		  <div class="col-md-3">
+				<div class="post-item">
+			<div class="item-content">
+			<div class="item-body">
+			<i class="fa fa-dropbox fa-4x" aria-hidden="true"></i>
+			<p>2000 товаров в наличии на складе, включая {{keys[1]}} в Краснодаре</p>
+			</div>
+			</div>
+			</div>
+	  </div>
+
+	  	  <div class="col-md-3">
+				<div class="post-item">
+			<div class="item-content">
+			<div class="item-body">
+			<i class="fa fa-truck fa-4x" aria-hidden="true"></i>
+			<p>Сотрудничаем со всеми транспортными компаниями, благодаря чему оперативно отправим {{keys[2]}} с нашего склада</p>
+			</div>
+			</div>
+			</div>
+	  </div>
+
+	  	  <div class="col-md-3">
+				<div class="post-item">
+			<div class="item-content">
+			<div class="item-body">
+			<i class="fa fa-star fa-4x" aria-hidden="true"></i>
+			<p>Покупайте {{keys[3]}} по выгодным ценам - мы являемся импортёром и работаем напрямую с иностранными поставщиками и заводами.</p>
+			</div>
+			</div>
+			</div>
+	  </div>
+
+
       {% if thumb  or  description %}
       <div class="row category_thumb">
         {% if thumb %}
@@ -26,7 +72,7 @@
       </div>     
       {% endif %}
        {% if categories %}
-      <h3 class="refine-search">{{ text_refine }}</h3>
+      <p class="refine-search bold-title">{{ text_refine }}</p>
       <div class="row">
         <div class="col-sm-12 category_list">
           <ul>
@@ -41,7 +87,7 @@
       {% if products %}
       <div class="category_filter">
         <div class="col-md-4 btn-list-grid">
-          <div class="btn-group">
+          <div class="hide">
             <button type="button" id="grid-view" class="btn btn-default grid" data-toggle="tooltip" title="{{ button_grid }}"><i class="fa fa-th"></i></button>
 			<button type="button" id="list-view" class="btn btn-default list" data-toggle="tooltip" title="{{ button_list }}"><i class="fa fa-th-list"></i></button>            
           </div>
@@ -130,9 +176,8 @@
 							 {% endfor %}
 						</div> #}
 											
-						<h4><a href="{{ product.href }}">{{ product.name }}</a></h4>
-						<p>Арт: {{product.sku}}</p>
-						
+						<p class="bold-title"><a href="{{ product.href }}">{{ product.name }}</a></p>
+						<p>Артикул: {{product.sku}}</p>
 						{# <div class="rating list-rate">
 						  {% for i in 1..5 %}
 							 {% if product.rating < i %}

@@ -82,6 +82,7 @@ $(document).ready(function() {
 	});
 
 	// Product List
+	localStorage.setItem('display', 'list');
 	$('#list-view').click(function() {
 		$('#content .product-grid > .clearfix').remove();
 

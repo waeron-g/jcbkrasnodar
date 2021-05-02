@@ -91,6 +91,7 @@ class ControllerExtensionModuleCategoryTab extends Controller {
 					'name'        => $result['name'],
 					//'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get($this->config->get('config_theme') . '_product_description_length')) . '..',
 					'price'       => $price,
+					'sku'		  => $result['sku'],
 					'special'     => $special,
 					'percentsaving' 	 => round((($result['price'] - $result['special'])/$result['price'])*100, 0),
 					'tax'         => $tax,
