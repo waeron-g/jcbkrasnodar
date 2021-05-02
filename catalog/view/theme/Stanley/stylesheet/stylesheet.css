@@ -828,7 +828,7 @@ header #cart li a, header #cart li {
     color: #000000;
     display: block;
     letter-spacing: .7px;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     position: relative;
     width: auto;
     font-size: 1.05em;
